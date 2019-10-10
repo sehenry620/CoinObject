@@ -60,8 +60,11 @@
             let newSpan = document.createElement("span");
             newSpan.innerHTML = coin.toString();
             containerElement.appendChild(newSpan);
-        
+            results.push(coin.toString());
         }
+
+        return results
+
 
 
     }
@@ -77,7 +80,10 @@
         for (i = 0; i < 20; i++){
             coin.flip()
             containerElement.appendChild(coin.toHTML())
+            results.push(coin.toHTML());
         }
+
+        return results
     }
 
         // display20Images()
@@ -96,8 +102,8 @@
 
     var button = document.querySelector("#button")
     button.addEventListener("click", function(){
-        display20Flips()
-        display20Images()
+        console.log(display20Flips())
+        console.log(display20Images())
     })
 
 
